@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Kloak...</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: transparent;
+            font-family: "Segoe UI", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 280px;
+            border-radius: 15px;
+            border: 1px solid #1e1e1e;
+            background-color: #5a5a5c;
+            background-image: radial-gradient(circle at center center, #000000, #5a5a5c), repeating-radial-gradient(circle at center center, #000000, #000000, 10px, transparent 20px, transparent 10px);
+            background-blend-mode: multiply;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .logo {
+            width: 150px;
+            border-radius: 0;
+            object-fit: contain;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            margin: 4px 0 0;
+            color: #f2f2f2;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            margin: 0;
+            color: #909090;
+            font-size: 12px;
+        }
+
+        .loader {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: block;
+            margin: 34px auto 0;
+            position: relative;
+            background: #3b3b3b;
+            color: #dadada;
+            box-shadow: -20px 0, 20px 0;
+            box-sizing: border-box;
+            animation: rotation 2s ease-in-out infinite;
+        }
+
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="logo" src="icons/logo.svg" alt="Kloak">
+        <span class="loader" aria-hidden="true"></span>
+    </div>
+</body>
+</html>

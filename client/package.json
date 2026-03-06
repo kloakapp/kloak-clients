@@ -1,0 +1,52 @@
+{
+  "name": "kloak-client",
+  "version": "1.0.0",
+  "description": "Kloak Client",
+  "main": "src/main/index.js",
+  "homepage": "https://kloak.app",
+  "author": "Kloak",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.kloak.client",
+    "productName": "Kloak",
+    "electronLanguages": [
+      "en-US"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json",
+      "splash.html",
+      "icons/**/*",
+      "!test-cache/**/*",
+      "!**/*.map"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "icons/icon.png",
+      "category": "Network",
+      "maintainer": "Kloak"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icons/icon.ico",
+      "signtoolOptions": {
+        "publisherName": "Kloak"
+      }
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8",
+    "rpmbuild": "^0.0.23"
+  }
+}
