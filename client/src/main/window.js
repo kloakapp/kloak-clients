@@ -116,7 +116,7 @@ function createWindow() {
         mainWindow.webContents.executeJavaScript(modalCode);
       }
 
-      // Inject Native Features (stealth mode + quick edit)
+      // Inject Native Features (quick edit)
       let nativeFeaturesPath = path.join(
         app.getAppPath(),
         "src",
